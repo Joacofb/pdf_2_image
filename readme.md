@@ -21,14 +21,14 @@ Asegúrate de tener lo siguiente antes de usar el programa:
 ## Instalación 🚀
 Clona este repositorio en tu máquina local:
   ```bash
-  git clone https://github.com/tu_usuario/tu_repositorio.git
-  cd tu_repositorio
+  git clone https://github.com/Joacofb/pdf_2_image.git
+  cd pdf_2_image
   ```
 
 ## Uso 📝
 **1.** Ejecuta el programa desde la consola, proporcionando el archivo PDF y el formato de imagen deseado como parámetros opcionales:
   ```bash
-  python pdf2image_converter.py archivo.pdf [formato] [ruta_destino]
+  python pdf2jpg.py archivo.pdf [formato] [ruta_destino]
   ```
   -  **archivo.pdf**: El archivo PDF que deseas convertir.
   -  **[formato]**: (Opcional) El formato de salida de las imágenes (`jpg`, `png`, etc.). Predeterminado: `jpg`.
@@ -37,10 +37,10 @@ Clona este repositorio en tu máquina local:
 **2.** Ejemplo: Si quieres convertir un archivo PDF llamado `documento.pdf` a imágenes PNG y guardarlas en una carpeta llamada `imagenes/`:
 
   ```bash
-  python pdf2image_converter.py documento.pdf png imagenes/
+  python pdf2jpg.py documento.pdf png imagenes/
   ```
 
-**3.** Salida: Las imágenes convertidas se guardarán con nombres en el formato `pagina_1.png`, `pagina_2.png`, etc.
+**3.** Salida: Las imágenes convertidas se guardarán con nombres en el formato `documento_1.png`, `documento_2.png`, etc.
 
 ## Código principal 📜
 Aquí se muestra el fragmento principal del código, para entender cómo funciona:
