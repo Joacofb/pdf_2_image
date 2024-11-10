@@ -8,53 +8,44 @@ Este es un sencillo programa en Python que convierte cada página de un archivo 
 
 ## Requisitos ⚙️
 Asegúrate de tener lo siguiente antes de usar el programa:
-
 - **Python 3.6+**
-
 - **Librerías**: Necesitarás instalar las librerías `pdf2image` y `Pillow`. Puedes hacerlo con:
-  ```
+  ```bash
   pip install pdf2image pillow
   ```
-  
 **Poppler**: Este programa depende de Poppler para leer PDFs. Instálalo siguiendo las instrucciones:
-
-- **Windows**: Descarga Poppler desde Poppler for Windows y agrega su ruta (el directorio bin) al PATH del sistema.
-- **MacOS**: Instala Poppler usando Homebrew con brew install poppler.
-- **Linux**: Instala Poppler con sudo apt install poppler-utils (en distribuciones basadas en Debian).
+- **Windows**: Descarga Poppler desde [Poppler for Windows](https://github.com/oschwartz10612/poppler-windows) y agrega su ruta (el directorio bin) al PATH del sistema.
+- **MacOS**: Instala Poppler usando Homebrew con `brew install poppler`.
+- **Linux**: Instala Poppler con `sudo apt install poppler-utils` (en distribuciones basadas en Debian).
 
 ## Instalación 🚀
 Clona este repositorio en tu máquina local:
-
-  ```
+  ```bash
   git clone https://github.com/tu_usuario/tu_repositorio.git
   cd tu_repositorio
   ```
 
 ## Uso 📝
-  Ejecuta el programa desde la consola, proporcionando el archivo PDF y el formato de imagen deseado como parámetros opcionales:
-
-  ```
+  * Ejecuta el programa desde la consola, proporcionando el archivo PDF y el formato de imagen deseado como parámetros opcionales:
+  ```bash
   python pdf2image_converter.py archivo.pdf [formato] [ruta_destino]
   ```
   -  **archivo.pdf**: El archivo PDF que deseas convertir.
-  -  **[formato]**: (Opcional) El formato de salida de las imágenes (jpg, png, etc.). Predeterminado: jpg.
+  -  **[formato]**: (Opcional) El formato de salida de las imágenes (`jpg`, `png`, etc.). Predeterminado: `jpg`.
   -  **[ruta_destino]**: (Opcional) La carpeta donde quieres guardar las imágenes convertidas. Predeterminado: carpeta actual.
 
-  Ejemplo: Si quieres convertir un archivo PDF llamado documento.pdf a imágenes PNG y guardarlas en una carpeta llamada imagenes/:
+  * Ejemplo: Si quieres convertir un archivo PDF llamado `documento.pdf` a imágenes PNG y guardarlas en una carpeta llamada `imagenes/`:
 
-  ```
-  Copiar código
+  ```bash
   python pdf2image_converter.py documento.pdf png imagenes/
   ```
 
-  Salida: Las imágenes convertidas se guardarán con nombres en el formato pagina_1.png, pagina_2.png, etc.
+  * Salida: Las imágenes convertidas se guardarán con nombres en el formato `pagina_1.png`, `pagina_2.png`, etc.
 
 ## Código principal 📜
 Aquí se muestra el fragmento principal del código, para entender cómo funciona:
 
-```
-python
-Copiar código
+```python
 import sys
 import os
 from pdf2image import convert_from_path
@@ -76,10 +67,11 @@ for i, pagina in enumerate(paginas):
 ```
 
 ## Notas adicionales 🗒️
-Precaución con rutas: Asegúrate de que Poppler esté correctamente configurado en tu sistema, especialmente en Windows, para evitar errores de conversión.
-Compatibilidad de formatos: Pillow soporta formatos populares como JPEG, PNG, BMP, y otros.
-Contribuir 🤝
+  - Precaución con rutas: Asegúrate de que `Poppler` esté correctamente configurado en tu sistema, especialmente en Windows, para evitar errores de conversión.
+  - Compatibilidad de formatos: `Pillow` soporta formatos populares como `JPEG`, `PNG`, `BMP`, y otros.
+
+## Contribuir 🤝
 ¿Tienes alguna sugerencia o mejora? ¡Siéntete libre de contribuir! Puedes hacer un fork de este repositorio, realizar cambios y luego hacer un pull request.
 
 ## Licencia 📄
-Este proyecto está licenciado bajo la MIT License. Para más detalles, consulta el archivo LICENSE.
+Este proyecto está licenciado bajo la MIT License. Para más detalles, consulta el archivo `LICENSE`.
